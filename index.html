@@ -1,12 +1,48 @@
 <html>
     <head>
-        <title>Agora Certificate HW2</title>
+        <title>Agora Certificate - Homework 2</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
+        <!--Operand Inputs-->
+        <input id="operand1" type="number"/>
+        <input id="operand2" type="number"/>
 
+        <!--Operator Buttons-->
+        <button id="add" onclick="add()">Add</button>
+        <button id="subtract" onclick="subtract()">Subtract</button>
+        <button id="multiply" onclick="multiply()">Multiply</button> 
+        <button id="divide" onclick="divide()">Divide</button>
+
+        <!--Result Output-->
+        <input id="result" disabled />
+
+        <!--JavaScript-->
         <script>
-
+            function add() {
+                let a = document.getElementById("operand1").value;
+                let b = document.getElementById("operand2").value;
+                let result = document.getElementById("result");
+                result.value = parseInt(a) + parseInt(b);
+            }
+            function subtract() {
+                let a = document.getElementById("operand1").value;
+                let b = document.getElementById("operand2").value;
+                let result = document.getElementById("result");
+                result.value = parseInt(a) - parseInt(b);
+            }
+            function multiply() {
+                let a = document.getElementById("operand1").value;
+                let b = document.getElementById("operand2").value;
+                let result = document.getElementById("result");
+                result.value = parseInt(a) * parseInt(b);
+            }
+            function divide() {
+                let a = document.getElementById("operand1").value;
+                let b = document.getElementById("operand2").value;
+                let result = document.getElementById("result");
+                result.value = parseInt(a) / parseInt(b);
+            }
         </script>
     </body>
 </html>
