@@ -4,44 +4,64 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <!--Operand Inputs-->
-        <input id="operand1" type="number"/>
-        <input id="operand2" type="number"/>
+        <div id="container">
+            <!--Operand Inputs-->
+            <div id="input-container">
+                <input id="operand1" type="number"/>
+                <input id="operand2" type="number"/>
+            </div>
 
-        <!--Operator Buttons-->
-        <button id="add" onclick="add()">Add</button>
-        <button id="subtract" onclick="subtract()">Subtract</button>
-        <button id="multiply" onclick="multiply()">Multiply</button> 
-        <button id="divide" onclick="divide()">Divide</button>
+            <!--Operator Buttons-->
+            <div id="button-container">
+                <button id="add" onclick="add()">Add</button>
+                <button id="subtract" onclick="subtract()">Subtract</button>
+                <button id="multiply" onclick="multiply()">Multiply</button> 
+                <button id="divide" onclick="divide()">Divide</button>
+            </div>
 
-        <!--Result Output-->
-        <input id="result" disabled />
+            <!--Result Output-->
+            <input id="result" disabled />
+        </div>
 
         <!--JavaScript-->
         <script>
+            // Operations
             function add() {
                 let a = document.getElementById("operand1").value;
                 let b = document.getElementById("operand2").value;
-                let result = document.getElementById("result");
-                result.value = parseInt(a) + parseInt(b);
+                if (isValid(a, b)) {
+                    let result = document.getElementById("result");
+                    result.value = parseInt(a) + parseInt(b);
+                }
             }
             function subtract() {
                 let a = document.getElementById("operand1").value;
                 let b = document.getElementById("operand2").value;
-                let result = document.getElementById("result");
-                result.value = parseInt(a) - parseInt(b);
+                if (isValid(a, b)) {
+                    let result = document.getElementById("result");
+                    result.value = parseInt(a) - parseInt(b);
+                }
             }
             function multiply() {
                 let a = document.getElementById("operand1").value;
                 let b = document.getElementById("operand2").value;
-                let result = document.getElementById("result");
-                result.value = parseInt(a) * parseInt(b);
+                if (isValid(a, b)) {
+                    let result = document.getElementById("result");
+                    result.value = parseInt(a) * parseInt(b);
+                }
             }
             function divide() {
                 let a = document.getElementById("operand1").value;
                 let b = document.getElementById("operand2").value;
-                let result = document.getElementById("result");
-                result.value = parseInt(a) / parseInt(b);
+                if (isValid(a, b)) {
+                    let result = document.getElementById("result");
+                    result.value = parseInt(a) / parseInt(b);
+                }
+            }
+
+            // Checks that both inputs have values
+            function isValid(a, b) {
+                return a && b;
             }
         </script>
     </body>
