@@ -37,7 +37,7 @@ document.getElementById("join").onclick = function () {
             })
 
             localStream.init(function(){
-                localStream.play("SelfStream")
+                localStream.play("self-stream")
                 console.log(`App id: ${appId}\nChannel id: ${channelName}`)
                 client.publish(localStream)
             })
