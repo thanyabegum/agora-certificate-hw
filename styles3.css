@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#left-pane {
+    background-color: white;
+    width: 25vw;
+    height: 100vh;
+    padding-left: 20px;
+    box-shadow: 0px 4px 52px rgba(0, 0, 0, 0.13);
+}
+
+#logo {
+    width: 30%;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+
+#login {
+    padding-left: 20px;
+    margin-top: 40px;
+}
+
+input {
+    margin-top: 15px;
+    padding: 5px;
+    width: 90%;
+    height: 32px;
+    font-size: 1.25rem;
+    border: 2px solid #099dfd;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 15px;
+    height: 28px;
+    width: 22%;
+    background-color: #099dfd;
+    border: none;
+    border-radius: 5px;
+}
+
+#participants {
+    margin-top: 40px;
+    padding-left: 20px;
+}
+
+#names {
+    margin-top: 40px;
+    padding-left: 20px;
+}
+
+#right-pane {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+#streams {
+    flex: 1;
+    text-align: left;
+    padding-top: 13vh;
+    padding-left: 4vw;
+}
+
+#self-stream {
+    justify-self: center;
+    border: 2px solid #099dfd;
+    width: 950px;
+    height: 450px;
+    border-radius: 5px;
+    opacity: 0;
+}
+
+.remote-stream {
+    margin-top: 20px;
+    margin-right: 20px;
+    justify-self: center;
+    border: 2px solid #099dfd;
+    width: 315px;
+    height: 145px;
+    border-radius: 5px;
+    opacity: 0;
+}

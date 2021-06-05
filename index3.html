@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Agora Certificate - Homework 3</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="flex-container">
+            <!--Join Channel Pane w/Participants-->
+            <div id="left-pane">
+                <div id="logo-container">
+                    <img id="logo" src="assets/agoraLogo.png"/>
+                </div>
+                <div id="login">
+                    <span>Join A Chat!</span>
+                    <input type="text" id="username">
+                    <input type="text" id="channelname">
+                    <button id="join"></button>
+                </div>
+                <div id="participants">
+                    <span>Participants</span>
+                    <div id="names">
+                        <p id="name-1"></p>
+                        <p id="name-2"></p>
+                        <p id="name-3"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Streams Pane-->
+            <div class="right-pane">
+                <div id="streams">
+                    <div id="self-stream"></div>
+                    <div class="flex-container">
+                        <div id="remote-stream-1" class="remote-stream"></div>
+                        <div id="remote-stream-2" class="remote-stream"></div>
+                        <div id="remote-stream-3" class="remote-stream"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Agora Scripts-->
+        <script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.0.0.js"></script>
+        <script src="agoraRtc.js"></script>
+    </body>
+</html>
