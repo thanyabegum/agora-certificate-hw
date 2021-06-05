@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    font-family: 'Cabin', Arial, sans-serif;
+    margin: 0;
+}
+
+h1, p {
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.9fr 1fr;
+    gap: 25px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+h1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    color: #099dfd;
+    font-size: 48px;
+    text-align: right;
+    margin: 0;
+    align-self: end;
+    line-height: 1.1;
+}
+
+#about {
+    margin: 0 auto;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    text-align: right;
+    line-height: 1.4;
+}
+
+#byline {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: end;
+    margin-bottom: 6px;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+}
+
+.hw {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: black;
+    height: 300px;
+    grid-row: 2 / 3;
+    transition: background-color 0.5s;
+}
+
+.hw:hover,
+.hw:focus {
+    background-color: #099dfd;
+    color: white;
+}
+
+.hw:hover a,
+.hw:focus a {
+    color: white;
+}
+
+.hw p {
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    #wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: auto 1.4rem;
+        gap: 1.4rem;
+    }
+
+    #wrapper h1 {
+        text-align: left;
+        margin-top: 1.6rem;
+    }
+
+    #byline {
+        margin-bottom: 0;
+    }
+
+    #about {
+        text-align: left;
+        margin-bottom: 6px;
+    }
+
+    #wrapper > div:last-child {
+        margin-bottom: 1.6rem;
+    }
+}

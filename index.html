@@ -1,68 +1,53 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Agora Certificate - Homework 2</title>
-        <link rel="stylesheet" href="styles.css" />
+        <title>Agora Certificate Homework</title>
+        <link rel="stylesheet" href="styles/index.css" />
+        <meta 
+            content="width=device-width, initial-scale=1" 
+            name="viewport" 
+        />
     </head>
     <body>
-        <div id="container">
-            <!--Operand Inputs-->
-            <div id="input-container">
-                <input id="operand1" type="number"/>
-                <input id="operand2" type="number"/>
+        <div id="wrapper">
+            <h1>Agora<br />Certificate<br />Homework</h1>
+            <p id="byline">
+                <em>
+                    <a href="https://github.com/thanyabegum">
+                        by Thanya Begum
+                    </a>
+                </em>
+            </p>
+            <p id="about">
+               In January of 2021, I attended 
+               <a href="https://www.agora.io/en/">Agora's</a> 
+               certificate program. The program provided lessons 
+               in HTML, CSS, JavaScript, and the Agora SDK, and it 
+               culminated in a final project utilizing all four
+               technologies. On this site you'll find the homework 
+               assignments I submitted as part of the program.
+            </p>
+            <div class="hw">
+                <h2>Homework 1</h2>
+                <p>A study in HTML/CSS.</p>
+                <a href="pages/hw1.html">
+                    Visit The Page →
+                </a>
             </div>
-
-            <!--Operator Buttons-->
-            <div id="button-container">
-                <button id="add" onclick="add()">Add</button>
-                <button id="subtract" onclick="subtract()">Subtract</button>
-                <button id="multiply" onclick="multiply()">Multiply</button> 
-                <button id="divide" onclick="divide()">Divide</button>
+            <div class="hw">
+                <h2>Homework 2</h2>
+                <p>A JavaScript calculator.</p>
+                <a href="pages/hw2.html">
+                    Visit The Page →
+                </a>
             </div>
-
-            <!--Result Output-->
-            <input id="result" disabled />
+            <div class="hw">
+                <h2>Homework 3</h2>
+                <p>An Agora-based video chat site.</p>
+                <a href="pages/hw3.html">
+                    Visit The Page →
+                </a>
+            </div>
         </div>
-
-        <!--JavaScript-->
-        <script>
-            // Operations
-            function add() {
-                let a = document.getElementById("operand1").value;
-                let b = document.getElementById("operand2").value;
-                if (isValid(a, b)) {
-                    let result = document.getElementById("result");
-                    result.value = parseInt(a) + parseInt(b);
-                }
-            }
-            function subtract() {
-                let a = document.getElementById("operand1").value;
-                let b = document.getElementById("operand2").value;
-                if (isValid(a, b)) {
-                    let result = document.getElementById("result");
-                    result.value = parseInt(a) - parseInt(b);
-                }
-            }
-            function multiply() {
-                let a = document.getElementById("operand1").value;
-                let b = document.getElementById("operand2").value;
-                if (isValid(a, b)) {
-                    let result = document.getElementById("result");
-                    result.value = parseInt(a) * parseInt(b);
-                }
-            }
-            function divide() {
-                let a = document.getElementById("operand1").value;
-                let b = document.getElementById("operand2").value;
-                if (isValid(a, b)) {
-                    let result = document.getElementById("result");
-                    result.value = parseInt(a) / parseInt(b);
-                }
-            }
-
-            // Checks that both inputs have values
-            function isValid(a, b) {
-                return a && b;
-            }
-        </script>
     </body>
 </html>
